@@ -6,7 +6,6 @@ http
   .createServer((req, res) => {
     const URL = req.url;
     const METHOD = req.method;
-    console.log(URL);
 
     let code = 200;
     let data = { msg: "got it" };
@@ -40,7 +39,6 @@ http
           break;
       }
     } else {
-      msg = "No se encuentra la ruta deseada";
       code = 404;
       data = { ...data, msg: "No se encuentra la ruta deseada" };
     }
